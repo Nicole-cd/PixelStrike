@@ -1,0 +1,169 @@
+/* Modo claro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F1EEFB;
+    color: #1B1730;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    background-color: #E9E4F7;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.card {
+    background-color: #F1EDFB;
+    border: 1px solid rgba(27, 23, 48, .12);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(27, 23, 48, .10);
+}
+
+.title {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.subtitle {
+    color: #4B4560;
+}
+
+.btn-primary {
+    background-color: #E8455C;
+    color: #F1EDFB;
+}
+
+.btn-secondary {
+    background-color: #C8890F;
+}
+
+.btn-tertiary {
+    background-color: #1E8F84;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Diseño para los hovers de las cards*/
+.card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-body {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.card-title {
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+    color: #007bff;
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.card:hover .btn-primary {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    z-index: 2;
+}
+
+/* modo oscuro */
+.modo-oscuro {
+    background-color: #14101F;
+    color: #F1EDFB;
+}
+
+.modo-oscuro .navbar {
+    background-color: #1A2338 !important;
+    
+}
+
+.modo-oscuro .navbar .navbar-brand {
+    color: #F1EDFB;  
+}
+
+.modo-oscuro .navbar .nav-link {
+    color: #F1EDFB;  }
+
+.modo-oscuro .container {
+    background-color: #1E1830;
+}
+
+.modo-oscuro .card {
+    background-color: #241C3A;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.modo-oscuro .card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modo-oscuro .subtitle {
+    color: #8B85A0;
+}
+
+.modo-oscuro .card-body {
+    background-color: transparent;
+}
+
+.modo-oscuro .card:hover .card-body {
+    background-color: rgba(232, 69, 92, 0.08);
+}
+
+.modo-oscuro .card {
+    background-color: #241C3A;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.modo-oscuro .card-title {
+    color: #F1EDFB;  
+}
+
+
+.modo-oscuro .card-text {
+    color: #F1EDFB;  
+}
+
+.modo-oscuro .card:hover .card-title {
+    color: #E8455C;
+}
+
+.modo-oscuro .card:hover .btn-primary {
+    background-color: #c0395a;
+    box-shadow: 0 5px 15px rgba(232, 69, 92, 0.3);
+}
