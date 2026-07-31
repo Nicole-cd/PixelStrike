@@ -108,15 +108,16 @@ body {
 
 .modo-oscuro .navbar {
     background-color: #1A2338 !important;
-    
+
 }
 
 .modo-oscuro .navbar .navbar-brand {
-    color: #F1EDFB;  
+    color: #F1EDFB;
 }
 
 .modo-oscuro .navbar .nav-link {
-    color: #F1EDFB;  }
+    color: #F1EDFB;
+}
 
 .modo-oscuro .container {
     background-color: #1E1830;
@@ -151,12 +152,12 @@ body {
 }
 
 .modo-oscuro .card-title {
-    color: #F1EDFB;  
+    color: #F1EDFB;
 }
 
 
 .modo-oscuro .card-text {
-    color: #F1EDFB;  
+    color: #F1EDFB;
 }
 
 .modo-oscuro .card:hover .card-title {
@@ -167,3 +168,4 @@ body {
     background-color: #c0395a;
     box-shadow: 0 5px 15px rgba(232, 69, 92, 0.3);
 }
+
