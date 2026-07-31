@@ -1,27 +1,28 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from .models import favoritos
 
-# Create your views here.
+from .models import Genero, Juego, Noticia, favoritos
+
+
 def inicio(request):
-    misFavoritos = favoritos.objects.all().values()
-    template = loader.get_template('index.html')
-    context = {'misFavoritos': misFavoritos}
-    return HttpResponse(template.render(context,request))
+    context = {
+        'generos': Genero.objects.filter(activo=True),
+        'misFavoritos': favoritos.objects.all()[:5],
+        'juegosDestacados': Juego.objects.filter(destacado=True),
+    }
+    return render(request, 'index.html', context)
+
 
 def enlaces(request):
-    template = loader.get_template('enlaces.html')
-    return HttpResponse(template.render())
+    return render(request, 'enlaces.html')
+
 
 def noticias(request):
-    template = loader.get_template('noticias.html')
-    return HttpResponse(template.render())
+    return render(request, 'noticias.html', {'noticias': Noticia.objects.all()})
 
-def reseñas(request):
-    template = loader.get_template('reseñas.html')
-    return HttpResponse(template.render())
+
+def resenas(request):
+    return render(request, 'resenas.html', {'juegos': Juego.objects.all()})
+
 
 def contactos(request):
-    template = loader.get_template('contactos.html')
-    return HttpResponse(template.render())
+    return render(request, 'contactos.html')

@@ -4,6 +4,6 @@ urlpatterns = [
     path('',views.inicio, name="inicio"),
     path('enlaces',views.enlaces, name="enlaces"), 
     path('noticias',views.noticias,name="noticias"),
-    path('reseñas',views.reseñas,name="reseñas"),
+    path('resenas', views.resenas, name="resenas"),
     path('contactos',views.contactos,name="contactos"),
 ]

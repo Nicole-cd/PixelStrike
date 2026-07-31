@@ -18,7 +18,7 @@
                 </p>
                 <p class="press-start-2p-regular mt-4">"Press start. Play smart."</p>
                 <div class="d-flex flex-wrap gap-3 mt-4">
-                    <a href="reseñas" class="btn-pixel-fill">Ver recomendaciones y reseñas</a>
+                    <a href="{% url 'resenas' %}" class="btn-pixel-fill">Ver recomendaciones y reseñas</a>
                     <a href="noticias" class="btn-pixel">Últimas noticias</a>
                 </div>
             </div>
@@ -55,6 +55,33 @@
             </div>
         </div>
     </header>
+
+    {% if juegosDestacados %}
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title mb-4">
+                <h2 class="h4 m-0">Juegos destacados</h2>
+                <hr>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                {% for juego in juegosDestacados %}
+                <div class="col">
+                    <article class="card h-100">
+                        {% if juego.imagen %}
+                        <img src="{{ juego.imagen.url }}" class="card-img-top" alt="Portada de {{ juego.titulo }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <span class="badge text-bg-primary mb-2">{{ juego.categoria }}</span>
+                            <h3 class="card-title h5">{{ juego.titulo }}</h3>
+                            <p class="card-text">{{ juego.descripcion|truncatewords:35 }}</p>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
 
     <br>
     <br>
@@ -129,12 +156,11 @@
                         <hr>
                     </div>
                     <ol>
-                        <li>Juegos de rol</li>
-                        <li>Simulación y vida</li>
-                        <li>Acción-aventura.</li>
-                        <li>Terror y sigilo</li>
-                        <li>Juegos de ritmo</li>
-                        <li>Simulación y vida</li>
+                        {% for genero in generos %}
+                        <li>{{ genero.nombre }}</li>
+                        {% empty %}
+                        <li>Aún no hay géneros publicados.</li>
+                        {% endfor %}
                     </ol>
                 </div>
                 <div class="col-lg-6">
@@ -147,6 +173,8 @@
                         <li>
                             <strong>{{ favorito.nombreFavorito }}</strong> - {{ favorito.descripcionFavorito }}
                         </li>
+                        {% empty %}
+                        <li>Aún no hay favoritos publicados.</li>
                         {% endfor %}
                     </ul>
                 </div>
