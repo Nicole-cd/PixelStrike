@@ -45,9 +45,10 @@
                             Más contenido
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="reseñas">Reseñas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'resenas' %}">Reseñas</a></li>
                             <li><a class="dropdown-item" href="contactos">Contactanos</a></li>
                             <li><a class="dropdown-item" href="enlaces">Enlaces de Interés</a></li>
+                            <li><a class="dropdown-item" href="{% url 'admin:index' %}">Administración</a></li>
                             <li><a class="dropdown-item"><button onclick="togglemodoscuro()"><i
                                             class="bi bi-moon-stars"></i></button></a></li>
                         </ul>
@@ -117,7 +118,7 @@
                                     Explorar
                                 </h6>
                                 <ul class="list-unstyled">
-                                    <li><a href="reseñas">Reseñas</a></li>
+                                    <li><a href="{% url 'resenas' %}">Reseñas</a></li>
                                     <li><a href="noticias">Noticias</a></li>
                                     <li><a href="contactos">Contactanos</a></li>
                                     <li><a href="enlaces">Enlaces de interés</a></li>
