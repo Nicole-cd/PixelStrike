@@ -10,9 +10,18 @@ def inicio(request):
     context = {'misFavoritos': misFavoritos}
     return HttpResponse(template.render(context,request))
 
-
-    
 def enlaces(request):
     template = loader.get_template('enlaces.html')
     return HttpResponse(template.render())
-    
+
+def noticias(request):
+    template = loader.get_template('noticias.html')
+    return HttpResponse(template.render())
+
+def reseñas(request):
+    template = loader.get_template('reseñas.html')
+    return HttpResponse(template.render())
+
+def contactos(request):
+    template = loader.get_template('contactos.html')
+    return HttpResponse(template.render())

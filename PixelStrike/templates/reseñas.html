@@ -1,0 +1,147 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}Noticias{% endblock %}
+
+{% block miContenido %}
+
+    <!-- Presentacion -->
+    <header class="hero py-5" style=" background-size: cover; background-position: center;">
+        <div class="container py-7 py-lg-5 position-relative">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <h1 class="mt-3">Reseñas</h1>
+                    <p class="lead mt-3">
+                        Bienvenido a nuestra sección de reseñas de videojuegos, donde exploramos los títulos más
+                        emocionantes y entretenidos del mundo gamer. Aquí encontrarás análisis y opiniones
+                        sinceras además de recomendaciones para ayudarte a descubrir nuevos juegos y mejorar tu
+                        experiencia
+                        de juego.
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="img-frame">
+                        <img src="{% static 'imgs/resenas.jpg' %}" class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Reseñas -->
+    <section id="Resenas" class="py-5">
+        <div class="container py-5">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'imgs/stardewva.jpg' %}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Stardew Valley</h5>
+                            <p class="card-text">Stardew Valley es un juego de simulación de granja que combina
+                                elementos de gestión, exploración y desarrollo personal. En este título, asumes el rol
+                                de un joven que hereda una antigua granja en el pueblo de Stardew Valley, donde debes
+                                cultivar
+                                tierras, criar animales, minar recursos y construir tu propio imperio agrícola.</p>
+                            <a href="#" class="btn btn-primary">Leer reseña completa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'imgs/dmmc.jpg' %}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Devil May Cry 1</h5>
+                            <p class="card-text">Devil May Cry 1 es un juego de acción en tercera persona que combina
+                                elementos de combate rápido y estilo de lucha basado en el arte marcial. En este título,
+                                asumes el rol de Dante, un joven que posee habilidades sobrenaturales para luchar contra
+                                demonios y otros seres sobrenaturales.</p>
+                            <a href="#" class="btn btn-primary">Leer reseña completa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="Resenas" class="py-3">
+            <div class="container py-5">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="{% static 'imgs/hadeslog.jpg' %}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Hades I</h5>
+                                <p class="card-text">Hades I es un juego de acción y aventura que combina elementos de
+                                    combate rápido y narrativa envolvente. En este título, asumes el rol de Hades, el
+                                    dios del inframundo, mientras luchas por controlar el reino de los muertos y
+                                    enfrentas desafíos únicos en un entorno oscuro y fascinante.</p>
+                                <a href="#" class="btn btn-primary">Leer reseña completa</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{% static 'imgs/colt.jpg' %}" class="card-img-top" alt="The Legend of Zelda: Breath of the Wild">
+                            <div class="card-body">
+                                <h5 class="card-title">Cult of the Lamb</h5>
+                                <p class="card-text">Cult of the Lamb es un juego de estrategia en tiempo real que
+                                    combina elementos de gestión de recursos y combate. En este título, asumes el rol de
+                                    un líder religioso que debe construir y mantener su culto mientras enfrenta desafíos
+                                    y enemigos en un mundo post-apocalíptico.</p>
+                                <a href="#" class="btn btn-primary">Leer reseña completa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <header class="hero py-5" style=" background-size: cover; background-position: center;">
+                <div class="container py-7 py-lg-5 position-relative">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-7">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+
+                                        <img src="{% static 'imgs/ozmafiaa.jpg' %}" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ozmafia!!</h5>
+                                            <p class="card-text">Ozmafia!! es un juego de tipo otome con una historia y
+                                                personajes
+                                                extremadamente interesantes, siendo una muy buena propuesta para los
+                                                fans en el género.</p>
+                                            <p class="card-text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'imgs/davre.jpg' %}" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Dave the Diver </h5>
+                                            <p class="card-text">Dave the diver es un juego RPG de aventura muy
+                                                entretenido y con un
+                                                ciclo de juego adictivo adictivo. completamente recomendado para los
+                                                amantes de este tipo de juegos</p>
+                                            <p class="card-text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+{% endblock %}
