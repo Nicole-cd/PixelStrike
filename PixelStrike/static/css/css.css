@@ -169,3 +169,11 @@ body {
     box-shadow: 0 5px 15px rgba(232, 69, 92, 0.3);
 }
 
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}

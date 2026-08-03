@@ -1,13 +1,12 @@
 from django.shortcuts import render
 
-from .models import Genero, Juego, Noticia, favoritos
+from .models import Genero, favoritos
 
 
 def inicio(request):
     context = {
         'generos': Genero.objects.filter(activo=True),
-        'misFavoritos': favoritos.objects.all()[:5],
-        'juegosDestacados': Juego.objects.filter(destacado=True),
+        'misFavoritos': favoritos.objects.all().values(),
     }
     return render(request, 'index.html', context)
 
@@ -17,11 +16,11 @@ def enlaces(request):
 
 
 def noticias(request):
-    return render(request, 'noticias.html', {'noticias': Noticia.objects.all()})
+    return render(request, 'noticias.html')
 
 
 def resenas(request):
-    return render(request, 'resenas.html', {'juegos': Juego.objects.all()})
+    return render(request, 'resenas.html')
 
 
 def contactos(request):

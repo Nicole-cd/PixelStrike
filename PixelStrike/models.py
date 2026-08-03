@@ -25,28 +25,4 @@ class Genero(models.Model):
         ordering = ['orden', 'nombre']
 
 
-class Juego(models.Model):
-    titulo = models.CharField(max_length=150)
-    descripcion = models.TextField()
-    imagen = models.ImageField(upload_to='juegos/', blank=True)
-    categoria = models.CharField(max_length=50)
-    destacado = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.titulo
-
-    class Meta:
-        ordering = ['-destacado', 'titulo']
-
-
-class Noticia(models.Model):
-    titulo = models.CharField(max_length=200)
-    contenido = models.TextField()
-    imagen = models.ImageField(upload_to='noticias/', blank=True)
-    fecha_publicacion = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.titulo
-
-    class Meta:
-        ordering = ['-fecha_publicacion']
