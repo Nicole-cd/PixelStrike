@@ -1,7 +1,7 @@
 {% extends "master.html" %}
 {% load static %}
 
-{% block title %}Noticias{% endblock %}
+{% block title %}Contactos{% endblock %}
 
 {% block miContenido %}
 
@@ -9,11 +9,9 @@
     <div class="container py-7 py-lg-5 position-relative">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <h5 class="mt-3">Conversemos</h5>
                 <h1 class="mt-3">Contáctenos</h1>
                 <p class="lead mt-3">
-                    ¿Tienes alguna pregunta o comentario? Nos encantaría saber de ti. Por favor, completa el
-                    formulario a continuación y nos pondremos en contacto lo antes posible.
+                    ¿Tienes alguna pregunta o comentario? Nos encantaría saber de ti. Por favor, usa el link para comunicarte con nosotros.
                 </p>
             </div>
             <div class="col-lg-5">
@@ -33,28 +31,13 @@
                     <h2 class="h4 m-0">Envíanos un mensaje</h2>
                     <hr>
                 </div>
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                <div class="img-frame">
+                    <img src="{% static 'imgs/remi.jpg' %}" class="img-fluid w-50">
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="section-title">
-                    <h6 class="h6 m-2">Correo directo</h6>
-                    <h2 class="h4 m-1">¿Prefieres tu correo electrónico?</h2>
+                    
                     <h6 class="h6 m-2">Usa este botón</h6>
                     <hr>
                     <a class="btn btn-tertiary" href="mailto:nicolecdisla@gmail.com" class="btn-email">Enviar

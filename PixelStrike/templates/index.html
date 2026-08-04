@@ -56,32 +56,6 @@
         </div>
     </header>
 
-    {% if juegosDestacados %}
-    <section class="py-5">
-        <div class="container">
-            <div class="section-title mb-4">
-                <h2 class="h4 m-0">Juegos destacados</h2>
-                <hr>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                {% for juego in juegosDestacados %}
-                <div class="col">
-                    <article class="card h-100">
-                        {% if juego.imagen %}
-                        <img src="{{ juego.imagen.url }}" class="card-img-top" alt="Portada de {{ juego.titulo }}">
-                        {% endif %}
-                        <div class="card-body">
-                            <span class="badge text-bg-primary mb-2">{{ juego.categoria }}</span>
-                            <h3 class="card-title h5">{{ juego.titulo }}</h3>
-                            <p class="card-text">{{ juego.descripcion|truncatewords:35 }}</p>
-                        </div>
-                    </article>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    {% endif %}
 
     <br>
     <br>

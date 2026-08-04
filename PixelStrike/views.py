@@ -20,6 +20,7 @@ def noticias(request):
 
 
 def resenas(request):
+    
     return render(request, 'resenas.html')
 
 
