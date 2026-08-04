@@ -2,7 +2,6 @@ from django.shortcuts import render
 
 from .models import Genero, favoritos
 
-
 def inicio(request):
     context = {
         'generos': Genero.objects.filter(activo=True),
@@ -26,3 +25,5 @@ def resenas(request):
 
 def contactos(request):
     return render(request, 'contactos.html')
+
+
