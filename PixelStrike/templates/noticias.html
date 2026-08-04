@@ -24,37 +24,6 @@
     </div>
 </header>
 
-<section class="py-5">
-    <div class="container">
-        <div class="section-title mb-4">
-            <h2 class="h4 m-0">Noticias publicadas</h2>
-            <hr>
-        </div>
-        {% if noticias %}
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            {% for noticia in noticias %}
-            <div class="col">
-                <article class="card h-100">
-                    {% if noticia.imagen %}
-                    <img src="{{ noticia.imagen.url }}" class="card-img-top" alt="Imagen de {{ noticia.titulo }}">
-                    {% endif %}
-                    <div class="card-body">
-                        <p class="small text-body-secondary">{{ noticia.fecha_publicacion|date:"d/m/Y H:i" }}</p>
-                        <h3 class="card-title h5">{{ noticia.titulo }}</h3>
-                        <p class="card-text">{{ noticia.contenido|linebreaksbr }}</p>
-                    </div>
-                </article>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
-        <p class="alert alert-info mb-0">Aún no hay noticias publicadas desde el panel de administración.</p>
-        {% endif %}
-    </div>
-</section>
-
-<!-- Noticias -->
-
 <header class="hero py-5" style=" background-size: cover; background-position: center;">
     <div class="container py-7 py-lg-5 position-relative">
         <div class="row align-items-center g-5">
